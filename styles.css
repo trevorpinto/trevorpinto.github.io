@@ -1,8 +1,21 @@
 body{
     background-color: #ffffff;
-}
 
-.typewriter h1{
+    text-align: center;
+    color: black;
+
+}
+* { text-decoration: none;}
+
+/* .typewriter h1{
+    overflow: hidden;
+    white-space: nowrap;
     font-family: 'Inter', sans-serif;
+    animation: typeEffect 3.5s steps(12, end)
     
 }
+@keyframes typeEffect {
+    from {width: 0}
+    to {width: 100%}
+    
+} */
