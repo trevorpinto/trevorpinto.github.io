@@ -75,13 +75,82 @@ body {
     text-decoration: none;
 }
 
+.sub-title h4{
+    color: lightgray;
+}
+
+
 .flex {
     display: flex;
     flex-direction: column; 
     align-items: center;    
-    gap: 500px;              
 }
 
+.work-section {
+    background-color: #F9F7F2; 
+    padding: 100px 0;         
+    min-height: 100vh;         /* Ensures it fills the screen */
+    width: 100%;
+    color: #000000;   
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.experience-list {
+    list-style-type: none; 
+    padding: 0;
+    margin-bottom: 60px;  
+}
+
+.work-item {
+    margin-bottom: 40px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centers the header and description horizontally */
+    text-align: center;     /* Centers the actual text lines */
+}
+
+.work-header {
+   display: flex;
+    justify-content: center; /* Centers the Title | Company content */
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.job-title {
+    font-weight: 700;    
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.divider {
+    color: #ccc;        
+    font-weight: 300;
+}
+
+.company {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #555;        
+}
+
+.work-description {
+    color: #444;
+    line-height: 1.6;
+    max-width: 700px;    
+}
 /* .typewriter h1{
     overflow: hidden;
     white-space: nowrap;
