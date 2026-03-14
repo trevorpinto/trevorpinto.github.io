@@ -3,7 +3,7 @@
 
 
 body {
-    padding-top: 100px; /* Gives 80px for the header + 20px of breathing room */
+    padding-top: 100px; /* Pads phrase text and header */
     background-color: #ffffff;
     text-align: center;
     margin: 0;
@@ -19,7 +19,7 @@ body {
     display: flex;
     align-items: center;
     background-color: #ffffff;
-    backdrop-filter: blur(10px); /* Frosted glass effect */
+    backdrop-filter: blur(10px); 
     z-index: 1000;
     border-bottom: 1px solid #e2e8f0;
 }
@@ -50,21 +50,36 @@ body {
 
 
 .typewrite {
-    font-size: 3.0rem;          /* Large, impactful size */
-    letter-spacing: -0.05em;    /* Tight kerning used in modern tech sites */
+    font-size: 3.0rem;          /* Size modifications */
+    letter-spacing: -0.05em;    
     color: black;
     display: inline-block;
 }
 
 .typewrite > .wrap {
-    border-right: 0.08em solid #000; /* Slightly thicker bar */
+    border-right: 0.08em solid #000; 
     padding-right: 2px;
     animation: blink 1s steps(1) infinite;
 }
 
-/* 3. The Blinking Animation */
 @keyframes blink {
     50% { border-color: transparent; }
+}
+
+.btn-contact {
+    background-color: black;
+    color: #ffffff !important;
+    padding: 8px 20px;      
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 500px;              
 }
 
 /* .typewriter h1{
