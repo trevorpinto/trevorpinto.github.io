@@ -1,56 +1,50 @@
-var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 1000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
+class Typewriter {
+  constructor(el, phrases, period) {
+    this.el = el;
+    this.phrases = phrases;
+    this.period = period || 2000;
+    
+    // Initial State (The "Control Registers")
+    this.currentText = '';
+    this.phraseIndex = 0;
+    this.isDeleting = false;
+    
+    this.tick(); // Initialize the loop
+  }
 
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
+  tick() {
+    const fullText = this.phrases[this.phraseIndex % this.phrases.length];
 
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
+    if (this.isDeleting) {
+      this.currentText = fullText.substring(0, this.currentText.length - 1);
+    } else {
+      this.currentText = fullText.substring(0, this.currentText.length + 1);
+    }
 
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+    // 2. Output to "Display"
+    this.el.innerHTML = `<span class="wrap">${this.currentText}</span>`;
 
-        var that = this;
-        var delta = 200 - Math.random() * 100;
+    // 3. Determine Next Clock Delay (Delta)
+    let delta = 130 - Math.random() * 75;
+    if (this.isDeleting) delta /= 2;
 
-        if (this.isDeleting) { delta /= 2; }
+    if (!this.isDeleting && this.currentText === fullText) {
+      delta = this.period;  // Hold state: word finished
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.currentText === '') {
+      this.isDeleting = false; // Reset state: word erased
+      this.phraseIndex++;
+      delta = 500;
+    }
 
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
+    // 5. Schedule Next Interrupt
+    setTimeout(() => this.tick(), delta);
+  }
+}
 
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-    };
+// Execution
+document.addEventListener('DOMContentLoaded', () => {
+  const el = document.querySelector('.typewrite');
+  const phrases = JSON.parse(el.getAttribute('data-type'));
+  new Typewriter(el, phrases, 2000);
+});
