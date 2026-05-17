@@ -3,7 +3,7 @@
 
 
 body {
-    padding-top: 100px; /* Pads phrase text and header */
+    padding-top: 100px; 
     background-color: #ffffff;
     text-align: center;
     margin: 0;
@@ -50,7 +50,7 @@ body {
 
 
 .typewrite {
-    font-size: 3.0rem;          /* Size modifications */
+    font-size: 3.0rem;          
     letter-spacing: -0.05em;    
     color: black;
     display: inline-block;
@@ -89,7 +89,7 @@ body {
 .work-section {
     background-color: #F9F7F2; 
     padding: 100px 0;         
-    min-height: 100vh;         /* Ensures it fills the screen */
+    min-height: 100vh;         
     width: 100%;
     color: #000000;   
 }
@@ -111,20 +111,18 @@ body {
 
 .education-grid {
     display: flex;
-    gap: 20px; /* Space between the two squares */
-    flex-wrap: wrap; /* Allows stacking on small mobile screens */
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
-/* Base style for both cards */
 .edu-card {
-    flex: 1; /* Makes both cards take up equal space */
-    min-width: 280px; /* Prevents cards from getting too squished */
+    flex: 1; 
+    min-width: 280px; 
     padding: 25px;
     border-radius: 8px;
-    border: 1px solid #333; /* Clean, subtle border */
+    border: 1px solid #333; 
 }
 
-/* Card typography styling */
 .edu-card h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
@@ -181,17 +179,17 @@ body {
 
 .project-content {
     display: flex;
-    align-items: center;    /* Vertically centers the text with the image */
-    justify-content: space-between; /* Puts space between the image and text */
-    width: 90%;             /* Keeps your 90% width layout */
-    margin: 0 auto;         /* Centers the whole layout on the screen */
-    gap: 30px;              /* Adds a clean gap between the image and the textbox */
+    align-items: center;    
+    justify-content: space-between; 
+    width: 90%;             
+    margin: 0 auto;         
+    gap: 30px;              
 }
 
 .project-section .ts-background {
     background: #000000 url('RMSP.png') no-repeat center center/cover;
     min-height: 200px; 
-    flex: 1;                /* Tells the image to take up 50% of the width */
+    flex: 1;                
     box-sizing: border-box; 
     border-radius: 20px;
     overflow: hidden;
@@ -199,7 +197,7 @@ body {
 
 .project-section .ts-background-one {
     background: #000000 url('1768689099741.jpg') no-repeat center center/auto 35%;
-    flex: 1;                /* Tells the image to take up 50% of the width */
+    flex: 1;               
     min-height: 300px;
     box-sizing: border-box; 
     border-radius: 20px;
@@ -207,23 +205,22 @@ body {
 }
 
 .project-description {
-    flex: 1;                /* Tells the text to take up the other 50% of the width */
-    color: #ffffff;         /* White text color */
-    padding: 30px;          /* Padding inside the box so text isn't cramped */
-    border-radius: 8px;     /* Optional: slightly rounds the corners of the textbox */
+    flex: 1;                
+    color: #ffffff;         
+    padding: 30px;         
+    border-radius: 8px;     
     box-sizing: border-box;
 }
 
-/* Quick styling for text inside the box */
 .project-description h3 {
     margin-top: 0;
     font-size: 1.5rem;
     font-weight: 600;
-    color: white;         /* Optional: accent color for the project title */
+    color: white;         
 }
 
 .project-description p {
-    line-height: 1.6;       /* Makes the description easier to read */
+    line-height: 1.6;      
 }
 
 
@@ -251,13 +248,13 @@ h2 {
     margin-bottom: 40px; 
     display: flex;
     flex-direction: column;
-    align-items: center;    /* Centers the header and description horizontally */
-    text-align: center;     /* Centers the actual text lines */
+    align-items: center;    
+    text-align: center;    
 }
 
 .work-header {
    display: flex;
-    justify-content: center; /* Centers the Title | Company content */
+    justify-content: center; 
     align-items: center;
     gap: 12px;
     margin-bottom: 12px;
