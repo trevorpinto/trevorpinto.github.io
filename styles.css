@@ -83,7 +83,7 @@ body {
 .flex {
     display: flex;
     flex-direction: column; 
-    align-items: center;    
+    align-items: center;   
 }
 
 .work-section {
@@ -93,6 +93,140 @@ body {
     width: 100%;
     color: #000000;   
 }
+
+.education-section {
+    margin: 40px 0;
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+.education-section h2 {
+    font-size: 2.5rem;
+    letter-spacing: -0.05em;    
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: black;
+    padding-bottom: 10px;
+}
+
+.education-grid {
+    display: flex;
+    gap: 20px; /* Space between the two squares */
+    flex-wrap: wrap; /* Allows stacking on small mobile screens */
+}
+
+/* Base style for both cards */
+.edu-card {
+    flex: 1; /* Makes both cards take up equal space */
+    min-width: 280px; /* Prevents cards from getting too squished */
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #333; /* Clean, subtle border */
+}
+
+/* Card typography styling */
+.edu-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.edu-card .degree {
+    font-size: 1rem;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.edu-card .status {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+
+.gatech {
+    border: 5px solid #b3a369; 
+    background-color: #F9F7F2; 
+}
+.gatech h3 {
+    color: #b3a369;
+}
+
+.sfu {
+    border: 5px solid #cc0633;
+    background-color: #F9F7F2;
+}
+.sfu h3 {
+    color: #cc0633;
+}
+
+.project-section{
+    margin-top: 100px;
+    padding: 20px;
+    background-color: black;
+}
+.project-section h2{
+    font-size: 2.5rem; 
+    letter-spacing: -0.05em;    
+    color: white;
+    font-weight: 600;   
+}
+
+.work-section h2 {
+    font-size: 2.5rem; 
+    letter-spacing: -0.05em;    
+    color: black;
+    font-weight: 600;
+}
+
+.project-content {
+    display: flex;
+    align-items: center;    /* Vertically centers the text with the image */
+    justify-content: space-between; /* Puts space between the image and text */
+    width: 90%;             /* Keeps your 90% width layout */
+    margin: 0 auto;         /* Centers the whole layout on the screen */
+    gap: 30px;              /* Adds a clean gap between the image and the textbox */
+}
+
+.project-section .ts-background {
+    background: #000000 url('RMSP.png') no-repeat center center/cover;
+    min-height: 200px; 
+    flex: 1;                /* Tells the image to take up 50% of the width */
+    box-sizing: border-box; 
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.project-section .ts-background-one {
+    background: #000000 url('1768689099741.jpg') no-repeat center center/auto 35%;
+    flex: 1;                /* Tells the image to take up 50% of the width */
+    min-height: 300px;
+    box-sizing: border-box; 
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.project-description {
+    flex: 1;                /* Tells the text to take up the other 50% of the width */
+    color: #ffffff;         /* White text color */
+    padding: 30px;          /* Padding inside the box so text isn't cramped */
+    border-radius: 8px;     /* Optional: slightly rounds the corners of the textbox */
+    box-sizing: border-box;
+}
+
+/* Quick styling for text inside the box */
+.project-description h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;         /* Optional: accent color for the project title */
+}
+
+.project-description p {
+    line-height: 1.6;       /* Makes the description easier to read */
+}
+
+
 
 .container {
     max-width: 1100px;
@@ -150,6 +284,18 @@ h2 {
     color: #444;
     line-height: 1.6;
     max-width: 700px;    
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ffffff; /* Crisp white button */
+    color: #000000;            /* Black text */
+    text-decoration: none;     /* Removes the default underline */
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;        /* Smooth, slightly rounded corners */
 }
 /* .typewriter h1{
     overflow: hidden;
