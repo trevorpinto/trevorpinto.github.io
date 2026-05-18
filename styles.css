@@ -88,14 +88,15 @@ body {
 
 .work-section {
     background-color: #F9F7F2; 
-    padding-top: 50px;         
-    min-height: 100vh;         
+    padding-top: 50px;    
+    padding-bottom: 50px;     
+    min-height: auto;
     width: 100%;
     color: #000000;   
 }
 
 .education-section {
-    margin: 40px 0;
+    margin: 40px 0;      /* Ensures it still looks great and takes full space on mobile */
     padding: 40px 20px;
     background-color: #ffffff;
 }
@@ -160,6 +161,7 @@ body {
 
 .project-section{
     margin-top: 100px;
+    max-width: 1600px;
     padding: 20px;
     background-color: black;
 }
@@ -187,7 +189,7 @@ body {
 }
 
 .project-section .ts-background {
-    background: #000000 url('RMSP_ss.jpg') no-repeat center center/cover;
+    background: url('RMSP_ss.jpg') no-repeat center center/cover;
     min-height: 350px; 
     margin-top: 50px;
     flex: 1;                
@@ -197,12 +199,22 @@ body {
 }
 
 .project-section .ts-background-one {
-    background: #000000 url('TS_ScreenSHot.jpg') no-repeat center top/cover;
+    background: url('TS_ScreenShot.jpg') no-repeat center top/cover;
     flex: 1;               
     min-height: 350px;
     box-sizing: border-box; 
     border-radius: 20px;
     overflow: hidden;
+}
+
+/* This only applies to screens wider than 1400px */
+@media (min-width: 1400px) {
+    .project-section .ts-background,
+    .project-section .ts-background-one {
+        max-height: 350px; /* Bumps up the height so the image doesn't look squished */
+        border-radius: 20px;           
+
+    }
 }
 
 .project-description {
