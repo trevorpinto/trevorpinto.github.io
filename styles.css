@@ -97,6 +97,7 @@ body {
 .education-section {
     margin: 40px 0;      /* Ensures it still looks great and takes full space on mobile */
     padding: 40px 20px;
+    width: 100%;
     background-color: #ffffff;
 }
 
