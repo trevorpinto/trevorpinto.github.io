@@ -89,8 +89,7 @@ body {
 .work-section {
     background-color: #F9F7F2; 
     padding-top: 50px;    
-    padding-bottom: 50px;     
-    min-height: auto;
+    padding-bottom: 50px;   
     width: 100%;
     color: #000000;   
 }
@@ -161,7 +160,7 @@ body {
 
 .project-section{
     margin-top: 100px;
-    max-width: 1600px;
+    width: 100%;
     padding: 20px;
     background-color: black;
 }
@@ -183,7 +182,7 @@ body {
     display: flex;
     align-items: center;    
     justify-content: space-between; 
-    width: 90%;             
+    max-width: 1400px;             
     margin: 0 auto;         
     gap: 30px;              
 }
@@ -207,16 +206,6 @@ body {
     overflow: hidden;
 }
 
-/* This only applies to screens wider than 1400px */
-@media (min-width: 1400px) {
-    .project-section .ts-background,
-    .project-section .ts-background-one {
-        max-height: 350px; /* Bumps up the height so the image doesn't look squished */
-        border-radius: 20px;           
-
-    }
-}
-
 .project-description {
     flex: 1;                
     color: #ffffff;         
@@ -238,10 +227,13 @@ body {
 
 
 
-.container {
-    max-width: 1100px;
+.work-container {
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.education-container{
+    max-width: 1400px;
 }
 
 h2 {
