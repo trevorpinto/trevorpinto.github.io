@@ -89,15 +89,15 @@ body {
 .work-section {
     background-color: #F9F7F2; 
     padding-top: 50px;    
-    padding-bottom: 50px;   
+    padding-bottom: 50px;
     width: 100%;
+    box-sizing: border-box;
     color: #000000;   
 }
 
 .education-section {
-    margin: 40px 0;      /* Ensures it still looks great and takes full space on mobile */
-    padding: 40px 20px;
     width: 100%;
+    box-sizing: border-box;
     background-color: #ffffff;
 }
 
@@ -112,6 +112,8 @@ body {
 
 .education-grid {
     display: flex;
+    max-width: 1550px;
+    padding-left: 10px;
     gap: 20px; 
     flex-wrap: wrap; 
 }
@@ -161,8 +163,9 @@ body {
 
 .project-section{
     margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%;
-    padding: 20px;
     background-color: black;
 }
 .project-section h2{
@@ -188,6 +191,7 @@ body {
     gap: 30px;              
 }
 
+
 .project-section .ts-background {
     background: url('RMSP_ss.jpg') no-repeat center center/cover;
     min-height: 350px; 
@@ -205,6 +209,23 @@ body {
     box-sizing: border-box; 
     border-radius: 20px;
     overflow: hidden;
+}
+
+/* media queryto modify layout to stacking veritical and prevent image shrhink*/
+@media (max-width: 1350px) {
+  .project-content {
+    flex-direction: column; /* Stacks the items vertically */
+    align-items: stretch;   /* Allows them to take full width of the phone screen */
+  }
+
+  .project-section .ts-background,
+  .project-section .ts-background-one {
+    flex: none;      
+    min-height: 330px;
+    box-sizing: border-box; 
+    border-radius: 20px; 
+    overflow: hidden;  
+  }
 }
 
 .project-description {
