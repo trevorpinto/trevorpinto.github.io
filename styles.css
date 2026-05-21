@@ -112,8 +112,8 @@ body {
 
 .education-grid {
     display: flex;
-    max-width: 1550px;
     padding-left: 10px;
+    padding-right: 10px;
     gap: 20px; 
     flex-wrap: wrap; 
 }
@@ -164,7 +164,7 @@ body {
 .project-section{
     margin-top: 100px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     width: 100%;
     background-color: black;
 }
