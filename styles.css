@@ -99,6 +99,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     background-color: #ffffff;
+    padding-bottom: 40px;
 }
 
 .education-section h2 {
